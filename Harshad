@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n, temp, digit, sum = 0;
+    cin >> n;
+
+    temp = n;
+    while (temp != 0) {
+        digit = temp % 10;
+        sum += digit;
+        temp /= 10;
+    }
+
+    if (n % sum == 0) {
+        cout << n << " is a Harshad number." << endl;
+    } else {
+        cout << n << " is not a Harshad number." << endl;
+    }
+    return 0;
+}
