@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double principal, rate, time;
+    double amount, compoundInterest;
+
+    cout << "Enter Principal Amount: ";
+    cin >> principal;
+
+    cout << "Enter Rate of Interest (%): ";
+    cin >> rate;
+
+    cout << "Enter Time (years): ";
+    cin >> time;
+
+    amount = principal * pow((1 + rate / 100), time);
+    compoundInterest = amount - principal;
+
+    cout << "\nTotal Amount = " << amount;
+    cout << "\nCompound Interest = " << compoundInterest;
+
+    return 0;
+}
