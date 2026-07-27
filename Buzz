@@ -1,0 +1,16 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long n;
+    cin >> n;
+
+    if (n % 7 == 0 || n % 10 == 7) {
+        cout << "Buzz";
+    } else {
+        cout << "Not Buzz";
+    }
+
+    return 0;
+}
