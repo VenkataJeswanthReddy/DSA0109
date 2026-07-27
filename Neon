@@ -1,0 +1,23 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long n;
+    cin >> n;
+
+    long long sq = n * n;
+
+    int sum = 0;
+    while (sq > 0) {
+        sum += sq % 10;
+        sq /= 10;
+    }
+
+    if (sum == n)
+        cout << "Neon Number";
+    else
+        cout << "Not a Neon Number";
+
+    return 0;
+}
