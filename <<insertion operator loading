@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+class Student
+{
+    int id;
+
+public:
+    Student(int x = 0)
+    {
+        id = x;
+    }
+
+    friend ostream &operator<<(ostream &out, Student s)
+    {
+        out << "Student ID = " << s.id;
+        return out;
+    }
+};
+
+int main()
+{
+    Student s(101);
+
+    cout << s;
+
+    return 0;
+}
