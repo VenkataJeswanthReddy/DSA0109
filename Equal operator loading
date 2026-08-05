@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class Number
+{
+    int n;
+
+public:
+    Number(int x = 0)
+    {
+        n = x;
+    }
+
+    bool operator==(Number obj)
+    {
+        return n == obj.n;
+    }
+};
+
+int main()
+{
+    Number a(10), b(10);
+
+    if (a == b)
+        cout << "Equal";
+    else
+        cout << "Not Equal";
+
+    return 0;
+}
